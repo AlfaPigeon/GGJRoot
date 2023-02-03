@@ -1,46 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
-using System.Net.Sockets;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class LookToMousePos : MonoBehaviour
+public class BulletImpulse : MonoBehaviour
 {
     // Start is called before the first frame update
-    PlayerIn playerInput = new PlayerIn();
-    Vector2 mousePos;
-    #region Datamembers
-
-    #region Editor Settings
-
-    [SerializeField] private LayerMask groundMask;
-
-    #endregion
-    #region Private Fields
-
+    private Rigidbody rb;
+    [SerializeField] private float force = 30;
     private Camera mainCamera;
-
-    #endregion
-
-    #endregion
-
-
-    #region Methods
-
-    #region Unity Callbacks
-
-    private void Start()
+    [SerializeField] private LayerMask groundMask;
+    private void Awake()
     {
-        // Cache the camera, Camera.main is an expensive operation.
-        mainCamera = Camera.main;
-    }
-
-    private void Update()
-    {
+        rb.freezeRotation= true;
+        rb.useGravity = false;
+        rb = GetComponent<Rigidbody>();
         Aim();
+        rb.AddForce(Vector3.forward * force, ForceMode.Impulse);
     }
-
-    #endregion
 
     private void Aim()
     {
@@ -73,12 +49,5 @@ public class LookToMousePos : MonoBehaviour
             // The Raycast did not hit anything.
             return (success: false, position: Vector3.zero);
         }
-    }
-
-    #endregion
-
-private void OnMousePos(InputValue value)
-    {
-        mousePos= value.Get<Vector2>();
     }
 }
