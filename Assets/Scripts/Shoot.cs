@@ -10,7 +10,7 @@ public class Shoot : MonoBehaviour
     private GameObject prefabs;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
