@@ -5,7 +5,8 @@ using UnityEngine;
 public class LookToMousePos : MonoBehaviour
 {
     // Start is called before the first frame update
-
+    PlayerIn playerInput = new PlayerIn();
+    
     void Start()
     {
         
@@ -14,6 +15,7 @@ public class LookToMousePos : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         
     }
 }
