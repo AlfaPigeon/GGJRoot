@@ -18,7 +18,9 @@ public class PlayerController : MonoBehaviour
     private Vector2 move;
     private Animator animator;
 
+
     private bool shoot = false;
+
 
     private void Start()
     {
