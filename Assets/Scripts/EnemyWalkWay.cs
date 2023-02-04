@@ -10,7 +10,7 @@ public class EnemyWalkWay : MonoBehaviour
 
     private void Start()
     {
-        _rig = GetComponent<Rigidbody>();
+      //  _rig = GetComponent<Rigidbody>();
         
         
     }

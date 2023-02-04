@@ -74,7 +74,11 @@ TrailRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+<<<<<<< HEAD
   m_Time: 0.32
+=======
+  m_Time: 5
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
   m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
@@ -84,7 +88,11 @@ TrailRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
+<<<<<<< HEAD
         value: 0.9920616
+=======
+        value: 1
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -92,8 +100,13 @@ TrailRenderer:
         inWeight: 0.33333334
         outWeight: 0.33333334
       - serializedVersion: 3
+<<<<<<< HEAD
         time: 0.98283386
         value: 0.03968811
+=======
+        time: 1
+        value: 0
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -105,8 +118,13 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
+<<<<<<< HEAD
       key0: {r: 1, g: 0.9654913, b: 0, a: 1}
       key1: {r: 1, g: 0.6825919, b: 0, a: 1}
+=======
+      key0: {r: 1, g: 1, b: 1, a: 1}
+      key1: {r: 1, g: 0.9899542, b: 0, a: 1}
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
       key4: {r: 0, g: 0, b: 0, a: 0}
@@ -133,8 +151,13 @@ TrailRenderer:
       m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
+<<<<<<< HEAD
     numCornerVertices: 90
     numCapVertices: 90
+=======
+    numCornerVertices: 0
+    numCapVertices: 0
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
     alignment: 0
     textureMode: 0
     textureScale: {x: 1, y: 1}
@@ -157,8 +180,11 @@ GameObject:
   - component: {fileID: 4448310595943365894}
   - component: {fileID: 5496219541504222831}
   - component: {fileID: 7180585069881583148}
+<<<<<<< HEAD
   - component: {fileID: 8032634028386731663}
   - component: {fileID: 4810964063849930483}
+=======
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
   m_Layer: 0
   m_Name: FireWall
   m_TagString: Untagged
@@ -175,7 +201,11 @@ Transform:
   m_GameObject: {fileID: 5990812459964995666}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
   m_LocalScale: {x: 0.60225, y: 0.60225, z: 0.60225}
+=======
+  m_LocalScale: {x: 1, y: 1, z: 1}
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5188237280454948389}
@@ -248,12 +278,17 @@ SphereCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
+<<<<<<< HEAD
   m_IsTrigger: 1
+=======
+  m_IsTrigger: 0
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!54 &8032634028386731663
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -295,6 +330,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 8038344524183138613, guid: 48114a30c9a1a0c4b9920a8acdd406f0,
     type: 3}
+=======
+>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077
 --- !u!1 &6267498387127640828
 GameObject:
   m_ObjectHideFlags: 0

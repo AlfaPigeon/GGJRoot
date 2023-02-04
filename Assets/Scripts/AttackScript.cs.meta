@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Scripts/AttackScript.cs.meta
 guid: 7d807c84dca36a44791be9e602003235
+========
+guid: c44395c50b9a0694580fa4cd4114b9f0
+>>>>>>>> b012f9b948c5a24241c41eeefa0283f485e79077:Assets/EnemyWalkWay.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
