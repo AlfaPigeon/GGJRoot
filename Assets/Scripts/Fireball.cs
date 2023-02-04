@@ -5,9 +5,10 @@ using UnityEngine;
 public class Fireball : MonoBehaviour
 {
     public GameObject explosion;
+    public float LifeCount = 3;
     private void Start()
     {
-        Destroy(gameObject, 10f);
+        Destroy(gameObject, 2f);
     }
 
 
@@ -27,6 +28,7 @@ public class Fireball : MonoBehaviour
     private void Explode()
     {
         Destroy( Instantiate(explosion, transform.position, transform.rotation),3f);
-        Destroy(gameObject);
+        LifeCount--;
+        if (LifeCount == 0)Destroy(gameObject);
     }
 }
