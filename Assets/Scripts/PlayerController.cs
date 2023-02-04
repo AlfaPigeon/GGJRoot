@@ -75,19 +75,10 @@ public class PlayerController : MonoBehaviour
         
         float forward_value = Vector3.Dot(characterController.velocity.normalized, transform.forward.normalized);
         float left_value  = Vector3.Dot(characterController.velocity.normalized, -transform.right.normalized);
-        if (forward_value > 0) 
-        { 
-            animator.SetFloat("Velocity", 1f);
-        }
-        else if(forward_value < 0)
-        {
-            animator.SetFloat("Velocity", -1f);
-        }
-        else
-        {
-            animator.SetFloat("Velocity", 0f);
-        }
 
+     
+        animator.SetFloat("Velocity", forward_value);
+  
         animator.SetFloat("Left", left_value);
     }
 
@@ -95,6 +86,7 @@ public class PlayerController : MonoBehaviour
 
     public void AttackEvent()
     {
+        RootController.Instance.GetHit(20f);
         Attack();
         StartCoroutine(ResetCooldown());
     }
