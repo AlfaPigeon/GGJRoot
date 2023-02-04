@@ -10,12 +10,13 @@ public class PlayerController : MonoBehaviour
     private CharacterController characterController;
     private Vector2 move;
     private Animator animator;
-
+   
     private void Start()
     {
         characterController = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         move = Vector2.zero;
+       
     }
 
 
@@ -31,17 +32,23 @@ public class PlayerController : MonoBehaviour
         {
             characterController.SimpleMove(new Vector3(move.x,transform.position.y,move.y).normalized*speed);
         }
-
-       
-        if(characterController.velocity.z > 0) { 
-        animator.SetFloat("Velocity", characterController.velocity.magnitude);
+        
+        float forward_value = Vector3.Dot(characterController.velocity.normalized, transform.forward.normalized);
+        float left_value  = Vector3.Dot(characterController.velocity.normalized, -transform.right.normalized);
+        if (forward_value > 0) 
+        { 
+            animator.SetFloat("Velocity", 1f);
+        }
+        else if(forward_value < 0)
+        {
+            animator.SetFloat("Velocity", -1f);
         }
         else
         {
-            animator.SetFloat("Velocity", -characterController.velocity.magnitude);
+            animator.SetFloat("Velocity", 0f);
         }
 
-        animator.SetFloat("Left", -characterController.velocity.x);
+        animator.SetFloat("Left", left_value);
     }
 
     private void OnMovement(InputValue value)
