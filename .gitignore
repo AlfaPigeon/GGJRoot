@@ -13,6 +13,9 @@
 *.aab
 *.unitypackage
 *.app
+/Assets/GrayLabMagicGroundTextures
+/Assets/Inguz Media Studio              
+/Assets/TextMesh Pro
 
 # Craacked Addressables
 /[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*

@@ -261,9 +261,10 @@ GameObject:
   - component: {fileID: 5610460318878445683}
   - component: {fileID: 156036456736751774}
   - component: {fileID: 8674550348914461670}
+  - component: {fileID: 470582435258495222}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -282,6 +283,7 @@ Transform:
   m_Children:
   - {fileID: 3589727051051858966}
   - {fileID: 5327953957941479399}
+  - {fileID: 5660583232076840964}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -317,7 +319,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02358406f2fda24449b325eaf04199a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  shooting_cooldown: 1
+  shooting_velocity: 50
+  Fireball_prefab: {fileID: 5990812459964995666, guid: b9b1e7a8cd7ea6942a0872e886d0d484,
+    type: 3}
+  ShootPoint: {fileID: 5660583232076840964}
+  speed: 15
 --- !u!143 &156036456736751774
 CharacterController:
   m_ObjectHideFlags: 0
@@ -375,6 +382,21 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &470582435258495222
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1075009583518531017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: efb45296cd19b2e40b63fd2b79ca9319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 19
 --- !u!1 &1206730587306293109
 GameObject:
   m_ObjectHideFlags: 0
@@ -1076,6 +1098,37 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 899397806400511278}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5161473264665081733
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5660583232076840964}
+  m_Layer: 0
+  m_Name: Shootpoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5660583232076840964
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5161473264665081733}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6.28, z: 3.19}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 405573735344727923}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5291606324731253262

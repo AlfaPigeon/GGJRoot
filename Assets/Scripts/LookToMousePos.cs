@@ -7,7 +7,7 @@ using UnityEngine.InputSystem;
 public class LookToMousePos : MonoBehaviour
 {
     // Start is called before the first frame update
-    PlayerIn playerInput = new PlayerIn();
+ 
     Vector2 mousePos;
     #region Datamembers
 
